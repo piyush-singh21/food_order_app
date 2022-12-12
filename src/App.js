@@ -15,13 +15,13 @@ function App() {
     setCartIsShown(false);
   };
   return (
-    <>
+    <CartProvider>
       {cartIsShown && <Cart onCloseCart={hideCartHandler} />}
       <Header onShowCart={showCartHandler} />
       <main>
         <Meals />
       </main>
-    </>
+    </CartProvider>
   );
 }
 
